@@ -57,6 +57,8 @@ const translations = {
     contact_email_placeholder: "Email",
     contact_message_placeholder: "Poruka",
     contact_send_button: "Pošalji",
+    success: 'Poruka uspešno poslata!',
+    error: 'Greška prilikom slanja. Pokušajte ponovo.',
     footer_text: "© 2025 Filip Geratović. Sva prava zadržana.",
     show_more: "Prikaži više",
     show_less: "Prikaži manje"
@@ -98,6 +100,8 @@ const translations = {
     contact_email_placeholder: "Email",
     contact_message_placeholder: "Message",
     contact_send_button: "Send",
+    success: 'Message sent successfully!',
+    error: 'Error sending message. Please try again.',
     footer_text: "© 2025 Filip Geratović. All rights reserved.",
     show_more: "Show more",
     show_less: "Show less"
@@ -109,7 +113,6 @@ function translatePage(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (translations[lang] && translations[lang][key]) {
-      // Ako je HTML sadržaj (npr. hero title sa spanom)
       if(el.dataset.html === "true"){
         el.innerHTML = translations[lang][key];
       } else {
@@ -172,34 +175,34 @@ document.querySelectorAll('.toggle-details').forEach(btn => {
   });
 });
 
+ function showAlert(type) {
+  const message = translations[currentLang][type];
+  alertBox.innerHTML = `
+    <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+      ${message}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Zatvori"></button>
+    </div>
+  `;
+}
 
   emailjs.init('vJ6lP2oyfW9XkJIg5'); // npr. ZduY9hd_asdf12345
 
   const contactForm = document.getElementById('contactForm');
   const alertBox = document.getElementById('formAlert');
 
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault(); // sprečava refresh
+contactForm.addEventListener('submit', function(e) {
+  e.preventDefault(); // sprečava refresh
 
-    emailjs.sendForm("service_portfolio","template_jeub7w4", contactForm)
-      .then(() => {
-        showAlert('Poruka uspešno poslata!', 'success');
-        contactForm.reset();
-      }, (error) => {
-        console.error('EmailJS greška:', error);
-        showAlert('Greška prilikom slanja. Pokušajte ponovo.', 'danger');
-      });
-  });
+  emailjs.sendForm("service_portfolio","template_jeub7w4", contactForm)
+    .then(() => {
+      showAlert('success');  // samo tip
+      contactForm.reset();
+    }, (error) => {
+      console.error('EmailJS greška:', error);
+      showAlert('error');   // samo tip
+    });
+})
 
-  function showAlert(message, type) {
-    alertBox.innerHTML = `
-      <div class="alert alert-${type} alert-dismissible fade show" role="alert">
-        ${message}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Zatvori"></button>
-      </div>
-    `;
-  }
-  
   // Dodaj klasu scrolled navbar-u kad se skroluje
   const navbar = document.querySelector('nav.navbar');
   window.addEventListener('scroll', () => {
@@ -281,6 +284,7 @@ document.querySelectorAll('.toggle-details').forEach(btn => {
       setTheme(true);
     }
   });
+
 
 
 
