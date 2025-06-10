@@ -238,25 +238,6 @@ section {
   border-top-right-radius: 12px;
 }
 
-.github-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-weight: 600;
-  color: #333;
-  text-decoration: none;
-  margin-top: 0.7rem;
-}
-
-.github-link i {
-  font-size: 1.3rem;
-}
-
-.github-link:hover {
-  color: #4078c0;
-}
-
-
 /* Veštine sekcija */
 #skills {
   padding: 4rem 1rem;
@@ -465,8 +446,6 @@ footer {
     font-size: 1rem;
   }
 }
-
-/* === DARK MODE (refined) === */
 /* === DARK MODE (final polished) === */
 body.dark-mode {
   background: #0f172a;
@@ -648,4 +627,16 @@ body.dark-mode .navbar-toggler {
 
 body.dark-mode .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+body.dark-mode .btn-outline-dark {
+  color: #ddd; /* svetlija boja teksta */
+  border-color: #ddd; /* svetlija boja ivice */
+}
+
+body.dark-mode .btn-outline-dark:hover,
+body.dark-mode .btn-outline-dark:focus {
+  color: #58a6ff; /* svetlija/plava boja na hover */
+  border-color: #58a6ff;
+  background-color: transparent;
 }
