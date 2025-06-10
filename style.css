@@ -6,6 +6,9 @@ body, html {
   background: #f9fafb;
   color: #222;
 }
+section {
+  scroll-margin-top: 56px; /* offset kad skroluje na sekciju */
+}
 
 /* Navbar */
 .navbar {
@@ -235,29 +238,6 @@ body, html {
   border-top-right-radius: 12px;
 }
 
-/* Modal stilovi */
-.modal-content {
-  border-radius: 12px;
-  padding: 1.5rem;
-  font-family: 'Poppins', sans-serif;
-  color: #334155;
-}
-
-.modal-header {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.modal-title {
-  font-weight: 700;
-  font-size: 1.75rem;
-}
-
-.modal-body img {
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-
 .github-link {
   display: inline-flex;
   align-items: center;
@@ -484,4 +464,188 @@ footer {
     padding: 12px 20px;
     font-size: 1rem;
   }
+}
+
+/* === DARK MODE (refined) === */
+/* === DARK MODE (final polished) === */
+body.dark-mode {
+  background: #0f172a;
+  color: #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .navbar {
+  background: #1e293b;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .navbar-brand,
+body.dark-mode .navbar-nav .nav-link {
+  color: #e2e8f0;
+}
+
+body.dark-mode .navbar-nav .nav-link:hover {
+  color: #facc15;
+}
+
+body.dark-mode .language-selector button {
+  color: #cbd5e1;
+}
+
+body.dark-mode .language-selector .dropdown-menu {
+  background: #1e293b;
+  border: 1px solid #334155;
+}
+
+body.dark-mode .language-selector .dropdown-menu a {
+  color: #f1f5f9;
+}
+
+body.dark-mode .language-selector .dropdown-menu a:hover {
+  background: #facc15;
+  color: #1e293b;
+}
+
+body.dark-mode .hero {
+  background: linear-gradient(135deg, #0ea5e9, #1e40af);
+  color: #f1f5f9;
+}
+
+body.dark-mode .hero .container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+/* === ABOUT SECTION === */
+body.dark-mode #about {
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+body.dark-mode #about h2,
+body.dark-mode #about p,
+body.dark-mode #about .lead {
+  color: #020202;
+}
+
+/* === PROJECTS SECTION === */
+body.dark-mode #projects {
+  background: #0f172a;
+}
+body.dark-mode #projects h2{
+  color: #264069;
+}
+
+body.dark-mode #projects .card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  box-shadow: 0 8px 24px rgba(251, 191, 36, 0.08);
+  transition: transform 0.2s ease;
+}
+
+body.dark-mode #projects .card:hover {
+  transform: translateY(-5px);
+}
+
+body.dark-mode #projects .card-body {
+  color: #f8fafc;
+}
+
+body.dark-mode #projects .card-text {
+  color: #94a3b8;
+}
+
+/* === MODAL === */
+body.dark-mode .modal-content {
+  background: #1e293b;
+  color: #f1f5f9;
+  border-radius: 12px;
+}
+
+/* === SKILLS SECTION === */
+body.dark-mode #skills {
+  background: #0f172a;
+}
+
+body.dark-mode #skills .icons i {
+  background: radial-gradient(circle at center, #334155, #1e293b);
+  color: #e2e8f0;
+  padding: 16px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode #skills .icons i:hover {
+  box-shadow: 0 0 20px #fbbf24, 0 0 40px #fbbf24, inset 0 0 12px #fbbf24;
+  color: #fbbf24;
+}
+
+/* === CONTACT SECTION === */
+body.dark-mode #contact {
+  background: #1e293b;
+}
+body.dark-mode #contact h2{
+  color: #264069;
+}
+
+body.dark-mode #contactForm {
+  background: #0f172a;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  padding: 40px;
+}
+
+body.dark-mode #contactForm input,
+body.dark-mode #contactForm textarea {
+  background-color: #1e293b;
+  color: #f8fafc;
+  border: 2px solid #334155;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+body.dark-mode #contactForm input::placeholder,
+body.dark-mode #contactForm textarea::placeholder {
+  color: #94a3b8;
+}
+
+body.dark-mode #contactForm input:focus,
+body.dark-mode #contactForm textarea:focus {
+  border-color: #facc15;
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.5);
+  outline: none;
+}
+
+/* === FOOTER === */
+body.dark-mode footer {
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+/* === SCROLL TO TOP BUTTON === */
+body.dark-mode #scrollTopBtn {
+  background: #facc15;
+  color: #1e293b;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+
+body.dark-mode #scrollTopBtn:hover {
+  background: #eab308;
+}
+
+/* === SUN ICON IN DARK MODE === */
+body.dark-mode .fa-sun,
+body.dark-mode .sun-icon {
+  color: #ffffff !important;
+}
+
+body.dark-mode .navbar-toggler {
+  border-color: #f1f5f9;
+}
+
+body.dark-mode .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
