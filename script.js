@@ -260,3 +260,27 @@ document.querySelectorAll('.toggle-details').forEach(btn => {
     img.src = projectImages[projectIndex][currentIndexes[projectIndex]];
   }
 
+  const toggleBtn = document.getElementById('theme-toggle');
+  const icon = toggleBtn.querySelector('i');
+
+  function setTheme(isDark) {
+    document.body.classList.toggle('dark-mode', isDark);
+    icon.classList = isDark ? 'fas fa-sun' : 'fas fa-moon';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    const isDark = !document.body.classList.contains('dark-mode');
+    setTheme(isDark);
+  });
+
+  // Load saved theme
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      setTheme(true);
+    }
+  });
+
+
+
