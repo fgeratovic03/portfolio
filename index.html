@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Filip Geratović</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icon.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#" data-i18n="navbar_brand">Filip G.</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav_about">O meni</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav_projects">Projekti</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills" data-i18n="nav_skills">Veštine</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav_contact">Kontakt</a></li>
+         <li class="nav-item language-selector ms-auto">
+ <li class="nav-item dropdown language-selector ms-auto" style="position:relative;">
+  <button id="langBtn" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    SR
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="langBtn" role="menu" aria-label="Language selector">
+    <li><a class="dropdown-item" href="#" data-lang="sr" role="menuitem">SR</a></li>
+    <li><a class="dropdown-item" href="#" data-lang="en" role="menuitem">EN</a></li>
+  </ul>
+</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+<!-- Hero Section -->
+<section id="hero" class="d-flex align-items-center" style="min-height: 100vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Tekstualni deo -->
+      <div class="col-md-6 text-center text-md-start">
+        <h1 class="display-4 fw-bold mb-3">
+          <span data-i18n="hero_title_prefix">Zdravo, ja sam</span> 
+          <span class="text-warning" data-i18n="hero_title_name">Filip Geratović</span>
+        </h1>
+        <p class="lead mb-4" data-i18n="hero_subtitle">
+          Web developer | PHP | JavaScript | MySQL | Bootstrap
+        </p>
+        <a href="#contact" class="btn btn-warning btn-lg shadow">
+          <span data-i18n="hero_cta_button">Kontaktiraj me</span>
+        </a>
+      </div>
+
+      <!-- Ilustracija -->
+      <div class="col-md-6 text-center mt-4 mt-md-0">
+        <img src="slike/ilustration.svg" alt="Programming illustration" class="img-fluid" style="max-height: 400px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- O meni -->
+<section id="about" class="bg-light py-5">
+  <div class="container" data-aos="fade-up">
+    <h2 class="text-center mb-4" data-i18n="about_title">O meni</h2>
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-4 text-center mb-4 mb-md-0">
+        <img 
+          src="slike/profilna.jpg" 
+          alt="Filip Geratović" 
+          class="img-fluid about-profile-img"
+        >
+      </div>
+      <div class="col-md-8">
+        <p class="lead text-center" data-i18n="about_text">
+              Zovem se Filip Geratović i završavam studije Informacionih tehnologija.  
+              Tokom studija stekao sam znanja iz programiranja, web razvoja i rada sa bazama podataka.  
+              Volim da učim nove tehnologije i da radim na projektima koji me inspirišu.  
+              Verujem da je kontinuirano učenje ključ uspeha i trudim se da svakim danom postajem bolji u svom radu.  
+              Moja strast je da znanje pretočim u praktična rešenja koja olakšavaju svakodnevicu i donose vrednost korisnicima.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="projects" class="py-5">
+  <div class="container" data-aos="fade-up">
+    <h2 class="text-center mb-4" data-i18n="projects_title">Projekti</h2>
+    <div class="row g-4">
+
+      <!-- Projekt 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card project-card">
+          <div class="position-relative">
+            <img class="project-img w-100" src="slike/projekat1.1.png" alt="Inventar Aplikacija" data-project-index="0" />
+            <button class="btn btn-dark btn-sm position-absolute top-50 start-0 translate-middle-y prev-btn" data-project-index="0" style="z-index:10;">&#10094;</button>
+            <button class="btn btn-dark btn-sm position-absolute top-50 end-0 translate-middle-y next-btn" data-project-index="0" style="z-index:10;">&#10095;</button>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title" data-i18n="project_1_title">Inventar Aplikacija</h5>
+            <p class="card-text" data-i18n="project_1_desc">PHP, MySQL, Bootstrap, PDF eksport</p>
+            <div class="project-details d-none">
+              <p data-i18n="project_1_details">Kompletna aplikacija za upravljanje proizvodima, fakturama i korisnicima. Login sistem, PDF generacija, admin panel.</p>
+            </div>
+            <button class="btn btn-primary btn-sm toggle-details mt-2" type="button">Prikaži više</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projekt 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card project-card">
+          <div class="position-relative">
+            <img class="project-img w-100" src="slike/projekat2.1.png" alt="AI Generator Naslova" data-project-index="1" />
+            <button class="btn btn-dark btn-sm position-absolute top-50 start-0 translate-middle-y prev-btn" data-project-index="1" style="z-index:10;">&#10094;</button>
+            <button class="btn btn-dark btn-sm position-absolute top-50 end-0 translate-middle-y next-btn" data-project-index="1" style="z-index:10;">&#10095;</button>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title" data-i18n="project_2_title">AI Generator Naslova</h5>
+            <p class="card-text" data-i18n="project_2_desc">HTML, CSS, JavaScript, Bootstrap</p>
+            <div class="project-details d-none">
+              <p data-i18n="project_2_details">AI Generator Naslova je jednostavan online alat koji pomoću veštačke inteligencije brzo kreira kreativne i privlačne naslove za blogove, članke i marketinške sadržaje. Idealan je za sve koji žele da uštede vreme i dobiju inspiraciju za svoje tekstove.</p>
+               <a href="https://fgeratovic03.github.io/ai-generator-naslova" target="_blank" class="btn btn-success btn-sm me-2">
+                  <i class="fas fa-external-link-alt"></i> Live aplikacija
+                </a>
+              <a href="https://github.com/fgeratovic03/ai-generator-naslova" target="_blank" class="btn btn-outline-dark btn-sm"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+            <button class="btn btn-primary btn-sm toggle-details mt-2" type="button">Prikaži više</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projekt 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card project-card">
+          <div class="position-relative">
+            <img class="project-img w-100" src="slike/projekat3.1.png" alt="Task Manager" data-project-index="2" />
+            <button class="btn btn-dark btn-sm position-absolute top-50 start-0 translate-middle-y prev-btn" data-project-index="2" style="z-index:10;">&#10094;</button>
+            <button class="btn btn-dark btn-sm position-absolute top-50 end-0 translate-middle-y next-btn" data-project-index="2" style="z-index:10;">&#10095;</button>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title" data-i18n="project_3_title">Task Manager</h5>
+            <p class="card-text" data-i18n="project_3_desc">PHP, MySQL, Bootstrap</p>
+            <div class="project-details d-none">
+              <p data-i18n="project_3_details">Sistem za upravljanje zadacima sa loginom, statusima, pretragom i korisničkim rolama.</p>
+              <a href="https://github.com/fgeratovic03/task-manager" target="_blank" class="btn btn-outline-dark btn-sm"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+            <button class="btn btn-primary btn-sm toggle-details mt-2" type="button">Prikaži više</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projekt 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card project-card">
+          <div class="position-relative">
+            <img class="project-img w-100" src="slike/projekat4.1.png" alt="Techup Landing Page" data-project-index="3" />
+            <button class="btn btn-dark btn-sm position-absolute top-50 start-0 translate-middle-y prev-btn" data-project-index="3" style="z-index:10;">&#10094;</button>
+            <button class="btn btn-dark btn-sm position-absolute top-50 end-0 translate-middle-y next-btn" data-project-index="3" style="z-index:10;">&#10095;</button>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title" data-i18n="project_4_title">Techup Landing Page</h5>
+            <p class="card-text" data-i18n="project_4_desc">HTML, CSS, Bootstrap, JS</p>
+            <div class="project-details d-none">
+              <p data-i18n="project_4_details">TechUp je moderan i pregledan portfolio sajt koji prikazuje tehnološke projekte i veštine autora. Dizajniran je da jasno predstavi iskustvo i znanje u razvoju softvera, sa fokusom na jednostavnost i profesionalnost.</p>
+               <a href="https://fgeratovic03.github.io/techup/" target="_blank" class="btn btn-success btn-sm me-2">
+                  <i class="fas fa-external-link-alt"></i> Live site
+                </a>
+              <a href="https://github.com/fgeratovic03/techup" target="_blank" class="btn btn-outline-dark btn-sm"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+            <button class="btn btn-primary btn-sm toggle-details mt-2" type="button">Prikaži više</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projekt 5 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card project-card">
+          <div class="position-relative">
+            <img class="project-img w-100" src="slike/projekat5.1.png" alt="Gera Elektro Reklamni sajt" data-project-index="4" />
+            <button class="btn btn-dark btn-sm position-absolute top-50 start-0 translate-middle-y prev-btn" data-project-index="4" style="z-index:10;">&#10094;</button>
+            <button class="btn btn-dark btn-sm position-absolute top-50 end-0 translate-middle-y next-btn" data-project-index="4" style="z-index:10;">&#10095;</button>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title" data-i18n="project_5_title">Gera Elektro Reklamni sajt</h5>
+            <p class="card-text" data-i18n="project_5_desc">HTML, CSS, JS, Bootstrap</p>
+            <div class="project-details d-none">
+              <p data-i18n="project_5_details">Gera Elektro je profesionalna prezentaciona web stranica električarske firme koja nudi usluge elektroinstalacija i održavanja. Sa jednostavnim i preglednim dizajnom, sajt jasno ističe ponudu usluga, kontakt informacije i stručnost tima.</p>
+               <a href="https://fgeratovic03.github.io/gera-elektro/" target="_blank" class="btn btn-success btn-sm me-2">
+                  <i class="fas fa-external-link-alt"></i> Live site
+                </a>
+              <a href="https://github.com/fgeratovic03/gera-elektro" target="_blank" class="btn btn-outline-dark btn-sm"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+            <button class="btn btn-primary btn-sm toggle-details mt-2" type="button">Prikaži više</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projekt 6 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card project-card">
+          <div class="position-relative">
+            <img class="project-img w-100" src="slike/projekat6.1.png" alt="Online Pijaca" data-project-index="5" />
+            <button class="btn btn-dark btn-sm position-absolute top-50 start-0 translate-middle-y prev-btn" data-project-index="5" style="z-index:10;">&#10094;</button>
+            <button class="btn btn-dark btn-sm position-absolute top-50 end-0 translate-middle-y next-btn" data-project-index="5" style="z-index:10;">&#10095;</button>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title" data-i18n="project_6_title">Online Pijaca</h5>
+            <p class="card-text" data-i18n="project_6_desc">HTML, CSS, JS</p>
+            <div class="project-details d-none">
+              <p data-i18n="project_6_details">Online Pijaca je digitalna platforma za kupovinu i prodaju domaćih proizvoda, voća i povrća. Jednostavan i pregledan dizajn omogućava korisnicima brzo pronalaženje i naručivanje svežih namirnica direktno od proizvođača..</p>
+               <a href="https://fgeratovic03.github.io/online-pijaca/" target="_blank" class="btn btn-success btn-sm me-2">
+                  <i class="fas fa-external-link-alt"></i> Live site
+                </a>
+              <a href="https://github.com/fgeratovic03/online-pijaca" target="_blank" class="btn btn-outline-dark btn-sm"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+            <button class="btn btn-primary btn-sm toggle-details mt-2" type="button">Prikaži više</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  
+  <!-- Veštine -->
+  <section id="skills" class="bg-light">
+    <div class="container text-center" data-aos="fade-up">
+      <h2 class="mb-4" data-i18n="skills_title">Veštine</h2>
+      <div class="icons d-flex justify-content-center flex-wrap">
+        <i class="fab fa-html5"></i>
+        <i class="fab fa-css3-alt"></i>
+        <i class="fab fa-js"></i>
+        <i class="fab fa-php"></i>
+        <i class="fas fa-database"></i>
+        <i class="fab fa-bootstrap"></i>
+        <i class="fab fa-github"></i>
+        <i class="fab fa-wordpress" title="WordPress"></i>
+        <i class="devicon-csharp-plain colored" title="C#"></i>
+      </div>
+    </div>
+  </section>
+
+<!-- Kontakt forma -->
+<section id="contact" class="d-flex align-items-center justify-content-center">
+  <div class="container" data-aos="fade-up">
+    <h2 class="text-center mb-4" data-i18n="contact_title">Kontakt</h2>
+
+    <!-- Mesto za alert -->
+    <div id="formAlert"></div>
+
+    <form id="contactForm">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <input type="text" name="name" class="form-control" placeholder="Ime" required data-i18n-placeholder="contact_name_placeholder">
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="email" name="email" class="form-control" placeholder="Email" required data-i18n-placeholder="contact_email_placeholder">
+        </div>
+      </div>
+      <div class="mb-3">
+        <textarea name="message" rows="5" class="form-control" placeholder="Poruka" required data-i18n-placeholder="contact_message_placeholder"></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary" data-i18n="contact_send_button">Pošalji</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p data-i18n="footer_text">&copy; 2025 Filip Geratović. Sva prava zadržana.</p>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script>AOS.init();</script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</body>
+</html>
