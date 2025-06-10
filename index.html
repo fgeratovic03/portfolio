@@ -15,33 +15,41 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#" data-i18n="navbar_brand">Filip G.</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav_about">O meni</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav_projects">Projekti</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills" data-i18n="nav_skills">Veštine</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav_contact">Kontakt</a></li>
-         <li class="nav-item language-selector ms-auto">
- <li class="nav-item dropdown language-selector ms-auto" style="position:relative;">
-  <button id="langBtn" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    SR
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="langBtn" role="menu" aria-label="Language selector">
-    <li><a class="dropdown-item" href="#" data-lang="sr" role="menuitem">SR</a></li>
-    <li><a class="dropdown-item" href="#" data-lang="en" role="menuitem">EN</a></li>
-  </ul>
-</li>
-        </ul>
-      </div>
+ <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#" data-i18n="navbar_brand">Filip G.</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav_about">O meni</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav_projects">Projekti</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills" data-i18n="nav_skills">Veštine</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav_contact">Kontakt</a></li>
+
+        <!-- Language selector dropdown -->
+        <li class="nav-item dropdown language-selector ms-3" style="position:relative;">
+          <button id="langBtn" class="btn btn-secondary dropdown-toggle btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            SR
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="langBtn" role="menu" aria-label="Language selector">
+            <li><a class="dropdown-item" href="#" data-lang="sr" role="menuitem">SR</a></li>
+            <li><a class="dropdown-item" href="#" data-lang="en" role="menuitem">EN</a></li>
+          </ul>
+        </li>
+
+        <!-- Theme toggle button -->
+        <li class="nav-item ms-3">
+          <button id="theme-toggle" class="btn btn-sm" title="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- Hero -->
 <!-- Hero Section -->
