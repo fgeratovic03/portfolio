@@ -51,6 +51,15 @@ const translations = {
     project_6_title: "Online Pijaca",
     project_6_desc: "HTML, CSS, JS",
     project_6_details: "Online Pijaca je digitalna platforma za kupovinu i prodaju domaćih proizvoda, voća i povrća. Jednostavan i pregledan dizajn omogućava korisnicima brzo pronalaženje i naručivanje svežih namirnica direktno od proizvođača..",
+    project_7_title: "Restoran Gurman Demo",
+    project_7_desc: "HTML, CSS, JS, Bootstrap",
+    project_7_details: "Promo sajt za restoran kreiran koristeći HTML, CSS, Bootstrap i AOS animacije. Sadrži sekcije o restoranu, uslugama, galeriji i kontakt formi. Dizajniran da bude responzivan, moderan i user-friendly.",
+    project_8_title: "Kafić Aroma Demo",
+    project_8_desc: "HTML, CSS, JS, Bootstrap",
+    project_8_details: "Prezentacioni sajt za lokalni kafić, dizajniran da istakne ambijent, ponudu i kontakt informacije. Sajt koristi moderne web tehnologije, animacije pri skrolovanju i responzivan raspored za optimalno korisničko iskustvo na svim uređajima.",
+    project_9_title: "Portfolio Fotograf Demo",
+    project_9_desc: "HTML, CSS, JS, Bootstrap",
+    project_9_details: "Jednostavan i elegantan promo sajt za fotografa, sa fokusom na vizuelnu prezentaciju radova. Sadrži galeriju sa lightbox prikazom, informacije o autoru i kontakt formu. Idealno za lične ili freelance fotografske projekte.",
     skills_title: "Veštine",
     contact_title: "Kontakt",
     contact_name_placeholder: "Ime",
@@ -94,6 +103,15 @@ const translations = {
     project_6_title: "Online Market",
     project_6_desc: "HTML, CSS, JS",
     project_6_details: "Online Market is a digital platform for buying and selling domestic products, fruits and vegetables. The simple and clear design allows users to quickly find and order fresh groceries directly from producers.",
+    project_7_title: "Restaurant Gurman Demo",
+    project_7_desc: "HTML, CSS, JS, Bootstrap",
+    project_7_details: "Restaurant promo site created using HTML, CSS, Bootstrap and AOS animations. Contains sections about the restaurant, services, gallery and contact form. Designed to be responsive, stylish and user-friendly.",
+    project_8_title: "Caffe Aroma Demo",
+    project_8_desc: "HTML, CSS, JS, Bootstrap",
+    project_8_details: "Presentation site for a local coffee shop, designed to highlight the ambiance, offer and contact information. The site uses modern web technologies, scrolling animations and a responsive layout for an optimal user experience on all devices.",
+    project_9_title: "Portfolio Photographer Demo",
+    project_9_desc: "HTML, CSS, JS, Bootstrap",
+    project_9_details: "A simple and elegant promo site for photographers, with a focus on the visual presentation of works. It contains a gallery with lightbox display, information about the author and a contact form. Ideal for personal or freelance photography projects.",
     skills_title: "Skills",
     contact_title: "Contact",
     contact_name_placeholder: "Name",
@@ -218,12 +236,15 @@ contactForm.addEventListener('submit', function(e) {
 
   // Definiši niz slika za svaki projekat
   const projectImages = [
-    ["slike/projekat1.1.png", "slike/projekat1.2.png", "slike/projekat1.3.png"],
+    ["slike/invapp1.jpg","slike/invapp2.jpg", "slike/invapp3.jpg","slike/invapp4.jpg", "slike/invapp5.jpg"],
     ["slike/projekat2.1.png", "slike/projekat2.2.png"],
     ["slike/projekat3.1.png", "slike/projekat3.2.png", "slike/projekat3.3.png"],
     ["slike/projekat4.1.png", "slike/projekat4.2.png", "slike/projekat4.3.png"],
     ["slike/projekat5.1.png", "slike/projekat5.2.png", "slike/projekat5.3.png"],
-    ["slike/projekat6.1.png", "slike/projekat6.2.png", "slike/projekat6.3.png"]
+    ["slike/projekat6.1.png", "slike/projekat6.2.png", "slike/projekat6.3.png"],
+    ["slike/projekat7.1.jpg", "slike/projekat7.2.jpg", "slike/projekat7.3.jpg", "slike/projekat7.4.jpg", "slike/projekat7.5.jpg", "slike/projekat7.6.jpg"],
+    ["slike/projekat8.1.jpg", "slike/projekat8.2.jpg", "slike/projekat8.3.jpg"],
+    ["slike/projekat9.1.jpg", "slike/projekat9.2.jpg", "slike/projekat9.3.jpg"]
   ];
 
   // Drži trenutni indeks slike za svaki projekat
@@ -284,7 +305,4 @@ contactForm.addEventListener('submit', function(e) {
       setTheme(true);
     }
   });
-
-
-
 
